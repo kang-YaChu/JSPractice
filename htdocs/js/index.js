@@ -80,13 +80,6 @@ window.addEventListener('load', () => {
   let cardHeader = Html('header')
     .setClass('card-header')
     .appendChild(cardTitle.node); // 將 *網頁標題* 放上 *網頁版頭*
-
-  let control1 = Html('p')
-    .setClass('control')
-    .setAttribute(
-      'innerHTML',
-      '<input class="input" placeholder="王大錘" id="name" type="text" />'
-    );
   
   let controlLabel1 = Html('label')
     .setClass('control-label')
@@ -94,18 +87,18 @@ window.addEventListener('load', () => {
       'innerHTML',
       '<label class="control-label" for="name">姓名</label>'
     );
-  
+	
+  let control1 = Html('p')
+    .setClass('control')
+    .setAttribute(
+      'innerHTML',
+      '<input class="input" placeholder="王大錘" id="name" type="text" />'
+    );  
+	
   let hField1 = Html('div')
     .setClass('h-field')
     .appendChild(controlLabel1.node)
     .appendChild(control1.node);
-
-  let control2 = Html('p')
-    .setClass('control')
-    .setAttribute(
-      'innerHTML',
-      '<input class="input" placeholder="10" id="hp" type="number">'
-    );
   
   let controlLabel2 = Html('label')
     .setClass('control-label')
@@ -113,18 +106,18 @@ window.addEventListener('load', () => {
       'innerHTML',
       '<label class="control-label" for="hp">血量 (hp)</label>'
     );
-  
+	
+  let control2 = Html('p')
+    .setClass('control')
+    .setAttribute(
+      'innerHTML',
+      '<input class="input" placeholder="10" id="hp" type="number">'
+    );  
+	
   let hField2 = Html('div')
     .setClass('h-field')
     .appendChild(controlLabel2.node)
     .appendChild(control2.node);
-
-  let control3 = Html('p')
-    .setClass('control')
-    .setAttribute(
-      'innerHTML',
-      '<input class="input" placeholder="1" id="ap" type="number">'
-    );
   
   let controlLabel3 = Html('label')
     .setClass('control-label')
@@ -132,18 +125,18 @@ window.addEventListener('load', () => {
       'innerHTML',
       '<label class="control-label" for="ap">攻擊力 (ap)</label>'
     );
-  
+	
+  let control3 = Html('p')
+    .setClass('control')
+    .setAttribute(
+      'innerHTML',
+      '<input class="input" placeholder="1" id="ap" type="number">'
+    );  
+	
   let hField3 = Html('div')
     .setClass('h-field')
     .appendChild(controlLabel3.node)
     .appendChild(control3.node);
-
-  let control4 = Html('p')
-    .setClass('control')
-    .setAttribute(
-      'innerHTML',
-      '<input class="input" placeholder="0" id="dp" type="number" />'
-    );
   
   let controlLabel4 = Html('label')
     .setClass('control-label')
@@ -151,7 +144,14 @@ window.addEventListener('load', () => {
       'innerHTML',
       '<label class="control-label" for="dp">防禦力 (dp)</label>'
     );
-  
+	
+  let control4 = Html('p')
+    .setClass('control')
+    .setAttribute(
+      'innerHTML',
+      '<input class="input" placeholder="0" id="dp" type="number" />'
+    );  
+
   let hField4 = Html('div')
     .setClass('h-field')
     .appendChild(controlLabel4.node)
@@ -167,8 +167,8 @@ window.addEventListener('load', () => {
   // 準備承載 *網頁內容* 的 HTML 元素
   let cardContent = Html('article')
     .setClass('card-content')
-    .appendChild(pane.node);
-
+	  .appendChild(pane.node);
+	  
   // 準備 *網頁桌面* 的 HTML 元素
   let cardDesktop = Html('section')
     .setClass('card')

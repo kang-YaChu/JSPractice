@@ -1,6 +1,6 @@
 var http = require('http');
 
-let staticFile = (response, fname, mine) => {
+let staticFile = (response, fname,mine) => {
   let fs = require('fs');
 
   fs.readFile(fname, (err, data) => {
@@ -9,7 +9,7 @@ let staticFile = (response, fname, mine) => {
     }
     else {
       response.writeHead(200, {
-        'Content-Type': mine
+        'Content-Type':mine
       });
 
       response.write(data);
@@ -31,11 +31,11 @@ http.createServer((request, response) => {
         break;
 		
 	  case '/assets/css/styles.css':
-        staticFile(response, '../htdocs/assets/css/styles.css', 'text/css');
+        staticFile(response,'../htdocs/assets/css/styles.css','text/css');
 		break;
 		
 	  case '/js/index.js':
-        staticFile(response, '../htdocs/js/index.js', 'text/javascript');
+        staticFile(response,'../htdocs/js/index.js','text/javascript');
 		break;
 	
       default:

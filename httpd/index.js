@@ -1,6 +1,6 @@
 var http = require('http');
 
-let staticFile = (response, fname,mine) => {
+let staticFile = (response, fname,mime) => {
   let fs = require('fs');
 
   fs.readFile(fname, (err, data) => {
@@ -9,7 +9,7 @@ let staticFile = (response, fname,mine) => {
     }
     else {
       response.writeHead(200, {
-        'Content-Type':mine
+        'Content-Type':mime
       });
 
       response.write(data);
